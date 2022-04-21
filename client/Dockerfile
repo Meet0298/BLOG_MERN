@@ -2,7 +2,7 @@
 FROM node:10.16-alpine
 
 # Working directory be app
-WORKDIR /client
+WORKDIR ./
 
 COPY package*.json ./
 
