@@ -1,5 +1,7 @@
 FROM node:16.13.2
 
+ENV NODE_OPTIONS="--max-old-space-size=2048"
+
 WORKDIR ./
 
 COPY package*.json ./
