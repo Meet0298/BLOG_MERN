@@ -1,16 +1,13 @@
-# Build react client
 FROM node:16.13.2
 
 WORKDIR ./
 
 COPY package*.json ./
 
-###  Installing dependencies
-
 RUN npm install --silent
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 5000
 
 CMD ["npm","start"]
