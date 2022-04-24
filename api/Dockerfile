@@ -4,7 +4,7 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 ENV GENERATE_SOURCEMAP false 
 
-ENV MONGO_URL = mongodb+srv://user:123@blogweb.gpn4x.mongodb.net/BLOG?retryWrites=true&w=majority
+# ENV MONGO_URL = mongodb+srv://user:123@blogweb.gpn4x.mongodb.net/BLOG?retryWrites=true&w=majority
 
 WORKDIR ./
 
