@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: Run docker-compose
-      community.docker.docker_compose:
+      docker_compose:
         project_src: ./
         state: present
