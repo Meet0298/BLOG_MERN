@@ -1,0 +1,8 @@
+---
+- name: Pull docker image
+  hosts: all
+  tasks:
+    - name: Run docker-compose
+      docker_compose:
+        project_src: ./
+        state: present
