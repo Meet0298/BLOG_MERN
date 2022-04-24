@@ -1,0 +1,21 @@
+services:
+  client:
+    image: meet0298/frontend
+    build: ./client
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-app
+    
+  api:
+    image: meet0298/backend
+    build: ./api
+    ports:
+      - "5000:5000"
+    networks:
+      - mern-app
+
+networks:
+  mern-app:
+    driver: bridge
