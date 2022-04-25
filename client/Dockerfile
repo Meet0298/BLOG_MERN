@@ -7,7 +7,7 @@ WORKDIR ./
 
 COPY package*.json ./
 
-###  Installing dependencies
+###  Installing dependencies o
 RUN npm install --silent
 
 COPY . .

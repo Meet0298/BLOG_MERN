@@ -3,6 +3,9 @@
   hosts: all
   tasks:
     - name: Run docker-compose
-      docker_compose:
-        project_src: ./
-        state: present
+      copy:
+        src: ./docker-compose.yml
+        dest: ./
+    - name: pull the images mentioned in docker-compose 
+      command: docker-compose -f ././docker-compose.yml pull
+    
