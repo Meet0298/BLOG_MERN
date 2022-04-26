@@ -7,5 +7,5 @@
         src: ./docker-compose.yml
         dest: ./
     - name: pull the images mentioned in docker-compose 
-      command: docker-compose -f ././docker-compose.yml pull
+      command: docker-compose -f ./docker-compose.yml pull
     
