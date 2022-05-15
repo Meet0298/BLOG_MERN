@@ -1,7 +1,7 @@
 version : "3"
 services:
   client:
-    image: meet0298/frontend
+    image: jshika/frontend
     build: ./client
     stdin_open: true
     ports:
@@ -10,7 +10,7 @@ services:
       - mern-app
     
   api:
-    image: meet0298/backend
+    image: jshika/backend
     build: ./api
     ports:
       - "5000:5000"
