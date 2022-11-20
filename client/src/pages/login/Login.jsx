@@ -7,6 +7,7 @@ import axios from "axios";
 export default function Login() {
 
     const userRef = useRef();
+    console.log(userRef);
     const passwordRef = useRef();
     const { dispatch, isFetching } = useContext(Context);
 

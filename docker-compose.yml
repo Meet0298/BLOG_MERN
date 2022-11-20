@@ -1,10 +1,10 @@
 services:
   client:
     image: meet0298/frontend
-    build: ./client
+    build: ./client  #location of DockerFile
     stdin_open: true
     ports:
-      - "3000:3000"
+      - "3000:3000" #host:container
     networks:
       - mern-app
     

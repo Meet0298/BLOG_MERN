@@ -31,22 +31,26 @@ export default function Register() {
                 <label>Username</label>
                 <input
                     type="text"
+                    minLength={3}
                     className="registerInput"
                     placeholder="Enter your username..."
                     onChange={e => setUsername(e.target.value)}
                 />
                 <label>Email</label>
                 <input
-                    type="text"
+                    type="email"
                     className="registerInput"
                     placeholder="Enter your email..."
                     onChange={e => setEmail(e.target.value)}
+
                 />
                 <label>Password</label>
                 <input
                     type="password"
                     className="registerInput"
                     placeholder="Enter your password..."
+                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,12}$"
+                    title = "Must contain atleast 1 uppercase letter, 1 lowercase letter, 1 digit, 1 special character and length should be minimum 8 and maximum 12"
                     onChange={e => setPassword(e.target.value)}
                 />
                 <button className="registerButton" type="submit">Register</button>
@@ -54,7 +58,7 @@ export default function Register() {
             <button className="registerLoginButton">
                 <Link className="link" to="/login">Login</Link>
             </button>
-            {error && <span style={{ color: "red", marginTop:"10px"}}>Something went wrong!!</span>}
+            {error && <span style={{ color: "red", marginTop:"10px"}}>Something went wrong!! Either username or email already exists</span>}
         </div>
     )
 }

@@ -6,7 +6,7 @@ import { Context } from "../../context/Context";
 
 export default function SinglePost() {
     const location = useLocation();
-    // console.log(location); pathname obtained is pathname: "/post/625008204cfc550d805c7759". we need the post id. 
+    console.log(location); //pathname obtained is pathname: "/post/625008204cfc550d805c7759". we need the post id. 
     // console.log(location.pathname.split("/")[2]);
     const path = location.pathname.split("/")[2];
     const [post, setPost] = useState({});

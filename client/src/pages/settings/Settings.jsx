@@ -3,6 +3,7 @@ import Sidebar from "../../components/sidebar/Sidebar"
 import { Context } from "../../context/Context"
 import "./settings.css"
 import axios from "axios"
+import { useLocation } from "react-router-dom"
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -45,12 +46,26 @@ export default function Settings() {
     }
   }
 
+  const deleteUser = async () => {
+    const data = {
+      userId: user._id
+    }
+  
+    try {
+      await axios.delete("/users/" + user._id, {data});
+      dispatch({ type: "LOGOUT" })
+      window.location.replace("/register");
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
+          {/* <span className="settingsDeleteTitle">Delete Account</span> */}
+          <button onClick={deleteUser}>Delete Account</button>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
