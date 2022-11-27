@@ -49,6 +49,7 @@ export default function Register() {
                     type="password"
                     className="registerInput"
                     placeholder="Enter your password..."
+                    required
                     pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,12}$"
                     title = "Must contain atleast 1 uppercase letter, 1 lowercase letter, 1 digit, 1 special character and length should be minimum 8 and maximum 12"
                     onChange={e => setPassword(e.target.value)}
